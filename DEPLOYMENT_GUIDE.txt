@@ -1,0 +1,251 @@
+===============================================
+RAG SYSTEM - DEPLOYMENT GUIDE
+===============================================
+
+STEP-BY-STEP DEPLOYMENT COMMANDS
+===============================================
+
+1. SETUP ENVIRONMENT
+-------------------
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file
+cp .env.example .env
+
+# Edit .env and add your keys:
+OPENROUTER_API_KEY=sk-or-v1-...
+ADMIN_API_TOKEN=your_secure_token_here
+
+
+2. BUILD INDEX (FIRST TIME OR AFTER DOC UPDATES)
+------------------------------------------------
+python src/ingest.py --docs docs/
+
+# Expected output:
+# - data/index.faiss
+# - data/meta.json
+# - data/embeddings.npy
+# - Number of chunks > 0
+
+
+3. START API SERVER
+------------------
+# Development
+python src/api_openrouter.py
+
+# Production (with uvicorn)
+uvicorn src.api_openrouter:app --host 0.0.0.0 --port 8000 --workers 4
+
+# Server will start on: http://localhost:8000
+# API Docs: http://localhost:8000/docs
+
+
+4. START FRONTEND
+----------------
+streamlit run src/frontend_streamlit.py
+
+# Frontend will open on: http://localhost:8501
+
+
+5. GENERATE API KEYS
+-------------------
+# Generate user API key
+curl -X POST "http://localhost:8000/admin/generate-api-key?user_id=alice&role=user&name=Alice" \
+  -H "X-API-Key: admin_key_123"
+
+# Save the returned API key securely
+
+
+6. TEST QUERY
+------------
+curl -X POST "http://localhost:8000/query" \
+  -H "X-API-Key: <your_user_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What services do you offer?",
+    "top_k": 5,
+    "temperature": 0.0,
+    "session_id": "session_1"
+  }'
+
+
+7. RUN TESTS
+-----------
+# Unit tests
+pytest tests/test_unit.py -v
+
+# Integration tests (server must be running)
+pytest tests/test_integration.py -v
+
+# All tests
+python run_tests.py
+
+
+===============================================
+TUNING KNOBS (src/config.py)
+===============================================
+
+Retrieval:
+- DEFAULT_TOP_K = 5 (try 3-10)
+- RERANKER_TOP_N = 50
+- RETRIEVAL_CONFIDENCE_THRESHOLD = 0.22
+
+Generation:
+- TEMPERATURE_POLICY = 0.0 (for policy answers)
+- TEMPERATURE_CONVERSATIONAL = 0.2 (for natural language)
+- MAX_TOKENS = 512
+
+Chunking (for ingest):
+- CHUNK_SIZE = 800 (500-1000 chars)
+- CHUNK_OVERLAP = 150 (100-200 chars)
+
+
+===============================================
+TESTING CHECKLIST
+===============================================
+
+✅ Unit Tests:
+- Index files exist (index.faiss, meta.json)
+- Metadata has valid structure
+- Retrieval returns consistent results
+
+✅ Integration Tests:
+- /health returns healthy status
+- /query returns answer + citations
+- Nonsense query returns safe-fail
+- Admin endpoints require auth
+
+✅ UI Tests:
+- Mic button captures speech
+- Transcript is editable
+- Submit shows answer + citations
+- Citations are clickable
+
+✅ Security Tests:
+- Admin endpoints require X-API-Key
+- User endpoints require valid key
+- No API keys in frontend code
+
+
+===============================================
+EXAMPLE TEST QUERIES
+===============================================
+
+1. "What services do you offer?"
+   Expected: List of services with citations
+
+2. "What is the remote work policy?"
+   Expected: Policy details with citations
+
+3. "How many sick days do I get?"
+   Expected: Specific number with citation
+
+4. "xyzabc123nonsense"
+   Expected: Safe-fail response (low confidence)
+
+5. "Tell me about employee benefits"
+   Expected: Benefits overview with citations
+
+
+===============================================
+MONITORING & AUDIT
+===============================================
+
+# View metrics
+curl http://localhost:8000/metrics
+
+# Audit summary
+curl -H "X-API-Key: admin_key_123" \
+  "http://localhost:8000/admin/audit-summary?date=2025-10-15"
+
+# Search audit logs
+curl -H "X-API-Key: admin_key_123" \
+  "http://localhost:8000/admin/audit-search?user_id=alice&limit=100"
+
+
+===============================================
+DOCUMENT MANAGEMENT
+===============================================
+
+# Upload document
+curl -X POST "http://localhost:8000/admin/upload-document" \
+  -H "X-API-Key: admin_key_123" \
+  -F "file=@new_policy.pdf"
+
+# List documents
+curl -H "X-API-Key: admin_key_123" \
+  "http://localhost:8000/admin/list-documents"
+
+# Delete document
+curl -X DELETE "http://localhost:8000/admin/delete-document/old_policy.pdf" \
+  -H "X-API-Key: admin_key_123"
+
+
+===============================================
+TROUBLESHOOTING
+===============================================
+
+Problem: "OPENROUTER_API_KEY not set"
+Solution: Add key to .env file
+
+Problem: "Index files missing"
+Solution: Run python src/ingest.py --docs docs/
+
+Problem: "Cannot connect to API"
+Solution: Check server is running on port 8000
+
+Problem: "Rate limit exceeded"
+Solution: Wait or use paid model instead of free
+
+Problem: "Low confidence answers"
+Solution: Tune RETRIEVAL_CONFIDENCE_THRESHOLD in config.py
+
+
+===============================================
+PRODUCTION DEPLOYMENT
+===============================================
+
+1. Use environment variables (not .env file)
+2. Set strong ADMIN_API_TOKEN
+3. Use HTTPS (reverse proxy with nginx)
+4. Enable rate limiting
+5. Set up log rotation
+6. Monitor audit logs regularly
+7. Backup index files daily
+8. Use paid models for reliability
+
+
+===============================================
+COST ESTIMATION
+===============================================
+
+Gemini Pro 1.5:
+- Input: $0.00001875/1K tokens
+- Output: $0.0000075/1K tokens
+- Average query: ~1500 tokens = $0.00003
+- 1000 queries/day = $0.90/month
+
+Claude 3 Haiku:
+- Input: $0.00025/1K tokens
+- Output: $0.00125/1K tokens
+- Average query: ~1500 tokens = $0.0005
+- 1000 queries/day = $15/month
+
+
+===============================================
+SUPPORT & DOCUMENTATION
+===============================================
+
+API Docs: http://localhost:8000/docs
+ReDoc: http://localhost:8000/redoc
+Health: http://localhost:8000/health
+
+For issues, check logs:
+- data/api.log
+- data/audit/audit_YYYY-MM-DD.jsonl
+
+
+===============================================
+END OF DEPLOYMENT GUIDE
+===============================================
