@@ -1,0 +1,316 @@
+2025-10-12 18:43:47.179 | INFO     | __main__:<module>:264 - ============================================================
+2025-10-12 18:43:47.183 | INFO     | __main__:<module>:265 - 🚀 RAG Document Ingestion Pipeline
+2025-10-12 18:43:47.186 | INFO     | __main__:<module>:266 - ============================================================
+2025-10-12 18:43:47.190 | INFO     | __main__:<module>:282 - 📂 Documents directory: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-10-12 18:43:47.191 | INFO     | __main__:<module>:283 - 🤖 Embedding model: all-mpnet-base-v2
+2025-10-12 18:43:47.193 | INFO     | __main__:<module>:284 - 💾 Output directory: D:\Python Project\RAG Project\rag-openrouter\data
+2025-10-12 18:43:47.196 | INFO     | __main__:<module>:285 - 📊 Chunk size: 800, Overlap: 150
+2025-10-12 18:43:47.197 | INFO     | __main__:<module>:286 - 🔄 Batch size: 32
+
+2025-10-12 18:43:47.202 | INFO     | __main__:ingest_and_index:164 - Loading embedder: all-mpnet-base-v2
+2025-10-12 19:08:15.620 | INFO     | __main__:ingest_and_index:171 - 📂 Scanning documents in: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-10-12 19:08:15.629 | INFO     | __main__:ingest_and_index:180 - 📄 Found 20 document(s)
+2025-10-12 19:08:15.635 | INFO     | __main__:process_file:187 - Processing: Client_Case_Studies.pdf
+2025-10-12 19:08:15.637 | INFO     | __main__:process_file:187 - Processing: Client_Onboarding_Guide.pdf
+2025-10-12 19:08:15.638 | INFO     | __main__:process_file:187 - Processing: Company_Overview_Detailed.pdf
+2025-10-12 19:08:15.640 | INFO     | __main__:process_file:187 - Processing: Content_Writing_Service_Guide.pdf
+2025-10-12 19:08:26.724 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Company_Overview_Detailed.pdf
+2025-10-12 19:08:26.733 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Content_Writing_Service_Guide.pdf
+2025-10-12 19:08:26.734 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Onboarding_Guide.pdf
+2025-10-12 19:08:26.735 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Case_Studies.pdf
+2025-10-12 19:08:26.735 | INFO     | __main__:process_file:187 - Processing: Data_Privacy_GDPR_Policy.pdf
+2025-10-12 19:08:26.737 | INFO     | __main__:process_file:187 - Processing: Diversity_Inclusion_Policy.pdf
+2025-10-12 19:08:26.739 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide.pdf
+2025-10-12 19:08:26.741 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide2.pdf
+2025-10-12 19:08:27.040 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Diversity_Inclusion_Policy.pdf
+2025-10-12 19:08:27.043 | INFO     | __main__:process_file:187 - Processing: Employee_Handbook_Detailed.pdf
+2025-10-12 19:08:27.114 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Data_Privacy_GDPR_Policy.pdf
+2025-10-12 19:08:27.124 | INFO     | __main__:process_file:187 - Processing: HR_Policy_Detailed.pdf
+2025-10-12 19:08:27.318 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from E-commerce_Solutions_Guide.pdf
+2025-10-12 19:08:27.321 | INFO     | __main__:process_file:187 - Processing: IT_Security_Policy.pdf
+2025-10-12 19:08:27.572 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Employee_Handbook_Detailed.pdf
+2025-10-12 19:08:27.576 | INFO     | __main__:process_file:187 - Processing: PPC_Advertising_Service_Guide.pdf
+2025-10-12 19:08:28.360 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from HR_Policy_Detailed.pdf
+2025-10-12 19:08:28.371 | INFO     | __main__:process_file:187 - Processing: Project_Management_Guide.pdf
+2025-10-12 19:08:29.065 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from IT_Security_Policy.pdf
+2025-10-12 19:08:29.107 | INFO     | __main__:process_file:187 - Processing: Sales_Playbook_Detailed.pdf
+2025-10-12 19:08:29.246 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from PPC_Advertising_Service_Guide.pdf
+2025-10-12 19:08:29.257 | INFO     | __main__:process_file:187 - Processing: sample_document.md
+2025-10-12 19:08:29.341 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from sample_document.md
+2025-10-12 19:08:29.380 | INFO     | __main__:process_file:187 - Processing: SEO_Service_Documentation.pdf
+2025-10-12 19:08:30.211 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from Project_Management_Guide.pdf
+2025-10-12 19:08:30.249 | INFO     | __main__:process_file:187 - Processing: Social_Media_Marketing_Guide.pdf
+2025-10-12 19:08:30.388 | INFO     | __main__:process_file:194 - ✓ Created 13 chunks from Sales_Playbook_Detailed.pdf
+2025-10-12 19:08:30.497 | INFO     | __main__:process_file:187 - Processing: Team_Structure_Roles.pdf
+2025-10-12 19:08:31.213 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from SEO_Service_Documentation.pdf
+2025-10-12 19:08:31.238 | INFO     | __main__:process_file:187 - Processing: Training_Development_Programs.pdf
+2025-10-12 19:08:31.712 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Social_Media_Marketing_Guide.pdf
+2025-10-12 19:08:31.782 | INFO     | __main__:process_file:187 - Processing: Web_Development_Service_Documentation.pdf
+2025-10-12 19:08:32.108 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from Team_Structure_Roles.pdf
+2025-10-12 19:08:32.968 | INFO     | __main__:process_file:194 - ✓ Created 11 chunks from Training_Development_Programs.pdf
+2025-10-12 19:08:33.630 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Web_Development_Service_Documentation.pdf
+2025-10-12 19:08:34.964 | INFO     | __main__:process_file:194 - ✓ Created 75 chunks from E-commerce_Solutions_Guide2.pdf
+2025-10-12 19:08:34.967 | INFO     | __main__:ingest_and_index:216 - ✅ Total chunks: 179
+2025-10-12 19:08:34.968 | INFO     | __main__:ingest_and_index:217 - 🔄 Generating embeddings (batch size: 32)...
+2025-10-12 19:10:04.968 | INFO     | __main__:ingest_and_index:251 - 
+============================================================
+2025-10-12 19:10:04.971 | INFO     | __main__:ingest_and_index:252 - ✨ Ingestion Complete!
+2025-10-12 19:10:04.973 | INFO     | __main__:ingest_and_index:253 - ============================================================
+2025-10-12 19:10:04.975 | INFO     | __main__:ingest_and_index:254 - ✅ Index built & saved: D:\Python Project\RAG Project\rag-openrouter\data\index.faiss
+2025-10-12 19:10:04.978 | INFO     | __main__:ingest_and_index:255 - ✅ Meta saved: D:\Python Project\RAG Project\rag-openrouter\data\meta.json
+2025-10-12 19:10:04.979 | INFO     | __main__:ingest_and_index:256 - ✅ Embeddings saved: D:\Python Project\RAG Project\rag-openrouter\data\embeddings.npy
+2025-10-12 19:10:04.981 | INFO     | __main__:ingest_and_index:257 - 📊 Total vectors: 179
+2025-10-12 19:10:04.983 | INFO     | __main__:ingest_and_index:258 - 📐 Embedding dimension: 768
+2025-10-12 19:10:04.985 | INFO     | __main__:ingest_and_index:259 - ============================================================
+2025-10-15 14:59:25.876 | INFO     | __main__:<module>:264 - ============================================================
+2025-10-15 14:59:25.880 | INFO     | __main__:<module>:265 - 🚀 RAG Document Ingestion Pipeline
+2025-10-15 14:59:25.883 | INFO     | __main__:<module>:266 - ============================================================
+2025-10-15 14:59:25.886 | INFO     | __main__:<module>:282 - 📂 Documents directory: docs
+2025-10-15 14:59:25.888 | INFO     | __main__:<module>:283 - 🤖 Embedding model: all-mpnet-base-v2
+2025-10-15 14:59:25.889 | INFO     | __main__:<module>:284 - 💾 Output directory: D:\Python Project\RAG Project\rag-openrouter\data
+2025-10-15 14:59:25.891 | INFO     | __main__:<module>:285 - 📊 Chunk size: 800, Overlap: 150
+2025-10-15 14:59:25.893 | INFO     | __main__:<module>:286 - 🔄 Batch size: 32
+
+2025-10-15 14:59:25.898 | INFO     | __main__:ingest_and_index:164 - Loading embedder: all-mpnet-base-v2
+2025-10-15 14:59:36.163 | INFO     | __main__:ingest_and_index:171 - 📂 Scanning documents in: docs
+2025-10-15 14:59:36.169 | INFO     | __main__:ingest_and_index:180 - 📄 Found 20 document(s)
+2025-10-15 14:59:36.172 | INFO     | __main__:process_file:187 - Processing: Client_Case_Studies.pdf
+2025-10-15 14:59:36.174 | INFO     | __main__:process_file:187 - Processing: Client_Onboarding_Guide.pdf
+2025-10-15 14:59:36.175 | INFO     | __main__:process_file:187 - Processing: Company_Overview_Detailed.pdf
+2025-10-15 14:59:36.177 | INFO     | __main__:process_file:187 - Processing: Content_Writing_Service_Guide.pdf
+2025-10-15 14:59:37.028 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.059 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Company_Overview_Detailed.pdf
+2025-10-15 14:59:37.092 | INFO     | __main__:process_file:187 - Processing: Data_Privacy_GDPR_Policy.pdf
+2025-10-15 14:59:37.095 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.099 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Onboarding_Guide.pdf
+2025-10-15 14:59:37.102 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.103 | INFO     | __main__:process_file:187 - Processing: Diversity_Inclusion_Policy.pdf
+2025-10-15 14:59:37.106 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Case_Studies.pdf
+2025-10-15 14:59:37.108 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.110 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide.pdf
+2025-10-15 14:59:37.116 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Content_Writing_Service_Guide.pdf
+2025-10-15 14:59:37.122 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide2.pdf
+2025-10-15 14:59:37.870 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.889 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Diversity_Inclusion_Policy.pdf
+2025-10-15 14:59:37.892 | INFO     | __main__:process_file:187 - Processing: Employee_Handbook_Detailed.pdf
+2025-10-15 14:59:37.903 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.910 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Data_Privacy_GDPR_Policy.pdf
+2025-10-15 14:59:37.915 | INFO     | __main__:process_file:187 - Processing: HR_Policy_Detailed.pdf
+2025-10-15 14:59:37.922 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:37.926 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from E-commerce_Solutions_Guide.pdf
+2025-10-15 14:59:37.929 | INFO     | __main__:process_file:187 - Processing: IT_Security_Policy.pdf
+2025-10-15 14:59:38.475 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:38.496 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Employee_Handbook_Detailed.pdf
+2025-10-15 14:59:38.541 | INFO     | __main__:process_file:187 - Processing: PPC_Advertising_Service_Guide.pdf
+2025-10-15 14:59:39.847 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:39.888 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from IT_Security_Policy.pdf
+2025-10-15 14:59:39.932 | INFO     | __main__:process_file:187 - Processing: Project_Management_Guide.pdf
+2025-10-15 14:59:40.692 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:40.702 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from HR_Policy_Detailed.pdf
+2025-10-15 14:59:40.824 | INFO     | __main__:process_file:187 - Processing: Sales_Playbook_Detailed.pdf
+2025-10-15 14:59:41.484 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:41.516 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from PPC_Advertising_Service_Guide.pdf
+2025-10-15 14:59:41.580 | INFO     | __main__:process_file:187 - Processing: sample_document.md
+2025-10-15 14:59:41.881 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:41.994 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from Project_Management_Guide.pdf
+2025-10-15 14:59:42.037 | INFO     | __main__:process_file:187 - Processing: SEO_Service_Documentation.pdf
+2025-10-15 14:59:42.228 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:42.251 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from sample_document.md
+2025-10-15 14:59:42.281 | INFO     | __main__:process_file:187 - Processing: Social_Media_Marketing_Guide.pdf
+2025-10-15 14:59:42.596 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:42.638 | INFO     | __main__:process_file:194 - ✓ Created 13 chunks from Sales_Playbook_Detailed.pdf
+2025-10-15 14:59:42.697 | INFO     | __main__:process_file:187 - Processing: Team_Structure_Roles.pdf
+2025-10-15 14:59:43.945 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:44.038 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Social_Media_Marketing_Guide.pdf
+2025-10-15 14:59:44.083 | INFO     | __main__:process_file:187 - Processing: Training_Development_Programs.pdf
+2025-10-15 14:59:44.254 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:44.286 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from SEO_Service_Documentation.pdf
+2025-10-15 14:59:44.315 | INFO     | __main__:process_file:187 - Processing: Web_Development_Service_Documentation.pdf
+2025-10-15 14:59:44.450 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:44.470 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from Team_Structure_Roles.pdf
+2025-10-15 14:59:45.567 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:45.639 | INFO     | __main__:process_file:194 - ✓ Created 11 chunks from Training_Development_Programs.pdf
+2025-10-15 14:59:46.138 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:46.159 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Web_Development_Service_Documentation.pdf
+2025-10-15 14:59:46.845 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-15 14:59:46.858 | INFO     | __main__:process_file:194 - ✓ Created 75 chunks from E-commerce_Solutions_Guide2.pdf
+2025-10-15 14:59:46.861 | INFO     | __main__:ingest_and_index:216 - ✅ Total chunks: 179
+2025-10-15 14:59:46.863 | INFO     | __main__:ingest_and_index:217 - 🔄 Generating embeddings (batch size: 32)...
+2025-10-15 15:01:38.077 | INFO     | __main__:ingest_and_index:251 - 
+============================================================
+2025-10-15 15:01:38.096 | INFO     | __main__:ingest_and_index:252 - ✨ Ingestion Complete!
+2025-10-15 15:01:38.099 | INFO     | __main__:ingest_and_index:253 - ============================================================
+2025-10-15 15:01:38.101 | INFO     | __main__:ingest_and_index:254 - ✅ Index built & saved: D:\Python Project\RAG Project\rag-openrouter\data\index.faiss
+2025-10-15 15:01:38.104 | INFO     | __main__:ingest_and_index:255 - ✅ Meta saved: D:\Python Project\RAG Project\rag-openrouter\data\meta.json
+2025-10-15 15:01:38.107 | INFO     | __main__:ingest_and_index:256 - ✅ Embeddings saved: D:\Python Project\RAG Project\rag-openrouter\data\embeddings.npy
+2025-10-15 15:01:38.110 | INFO     | __main__:ingest_and_index:257 - 📊 Total vectors: 179
+2025-10-15 15:01:38.113 | INFO     | __main__:ingest_and_index:258 - 📐 Embedding dimension: 768
+2025-10-15 15:01:38.115 | INFO     | __main__:ingest_and_index:259 - ============================================================
+2025-10-16 14:21:47.989 | INFO     | __main__:<module>:264 - ============================================================
+2025-10-16 14:21:47.996 | INFO     | __main__:<module>:265 - 🚀 RAG Document Ingestion Pipeline
+2025-10-16 14:21:48.070 | INFO     | __main__:<module>:266 - ============================================================
+2025-10-16 14:21:48.075 | INFO     | __main__:<module>:282 - 📂 Documents directory: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-10-16 14:21:48.079 | INFO     | __main__:<module>:283 - 🤖 Embedding model: all-mpnet-base-v2
+2025-10-16 14:21:48.084 | INFO     | __main__:<module>:284 - 💾 Output directory: D:\Python Project\RAG Project\rag-openrouter\data
+2025-10-16 14:21:48.088 | INFO     | __main__:<module>:285 - 📊 Chunk size: 800, Overlap: 150
+2025-10-16 14:21:48.094 | INFO     | __main__:<module>:286 - 🔄 Batch size: 32
+
+2025-10-16 14:21:48.105 | INFO     | __main__:ingest_and_index:164 - Loading embedder: all-mpnet-base-v2
+2025-10-16 14:21:52.105 | INFO     | __main__:ingest_and_index:171 - 📂 Scanning documents in: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-10-16 14:21:52.119 | INFO     | __main__:ingest_and_index:180 - 📄 Found 20 document(s)
+2025-10-16 14:21:52.127 | INFO     | __main__:process_file:187 - Processing: Client_Case_Studies.pdf
+2025-10-16 14:21:52.130 | INFO     | __main__:process_file:187 - Processing: Client_Onboarding_Guide.pdf
+2025-10-16 14:21:52.133 | INFO     | __main__:process_file:187 - Processing: Company_Overview_Detailed.pdf
+2025-10-16 14:21:52.135 | INFO     | __main__:process_file:187 - Processing: Content_Writing_Service_Guide.pdf
+2025-10-16 14:21:53.176 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:53.180 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Company_Overview_Detailed.pdf
+2025-10-16 14:21:53.182 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:53.186 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Content_Writing_Service_Guide.pdf
+2025-10-16 14:21:53.190 | INFO     | __main__:process_file:187 - Processing: Data_Privacy_GDPR_Policy.pdf
+2025-10-16 14:21:53.193 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:53.196 | INFO     | __main__:process_file:187 - Processing: Diversity_Inclusion_Policy.pdf
+2025-10-16 14:21:53.203 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Onboarding_Guide.pdf
+2025-10-16 14:21:53.205 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:53.216 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide.pdf
+2025-10-16 14:21:53.217 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Case_Studies.pdf
+2025-10-16 14:21:53.266 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide2.pdf
+2025-10-16 14:21:53.793 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:54.013 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:54.047 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Diversity_Inclusion_Policy.pdf
+2025-10-16 14:21:54.082 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:54.128 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Data_Privacy_GDPR_Policy.pdf
+2025-10-16 14:21:54.309 | INFO     | __main__:process_file:187 - Processing: Employee_Handbook_Detailed.pdf
+2025-10-16 14:21:54.426 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from E-commerce_Solutions_Guide.pdf
+2025-10-16 14:21:54.475 | INFO     | __main__:process_file:187 - Processing: HR_Policy_Detailed.pdf
+2025-10-16 14:21:55.389 | INFO     | __main__:process_file:187 - Processing: IT_Security_Policy.pdf
+2025-10-16 14:21:56.168 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:56.632 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Employee_Handbook_Detailed.pdf
+2025-10-16 14:21:57.807 | INFO     | __main__:process_file:187 - Processing: PPC_Advertising_Service_Guide.pdf
+2025-10-16 14:21:58.563 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:58.702 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:21:58.871 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from IT_Security_Policy.pdf
+2025-10-16 14:21:59.012 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from HR_Policy_Detailed.pdf
+2025-10-16 14:21:59.423 | INFO     | __main__:process_file:187 - Processing: Project_Management_Guide.pdf
+2025-10-16 14:22:00.151 | INFO     | __main__:process_file:187 - Processing: Sales_Playbook_Detailed.pdf
+2025-10-16 14:22:00.371 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:01.096 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from PPC_Advertising_Service_Guide.pdf
+2025-10-16 14:22:01.648 | INFO     | __main__:process_file:187 - Processing: sample_document.md
+2025-10-16 14:22:01.785 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:02.046 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:02.300 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from Project_Management_Guide.pdf
+2025-10-16 14:22:02.337 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:02.569 | INFO     | __main__:process_file:194 - ✓ Created 13 chunks from Sales_Playbook_Detailed.pdf
+2025-10-16 14:22:02.725 | INFO     | __main__:process_file:187 - Processing: SEO_Service_Documentation.pdf
+2025-10-16 14:22:03.019 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:03.019 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from sample_document.md
+2025-10-16 14:22:03.029 | INFO     | __main__:process_file:187 - Processing: Social_Media_Marketing_Guide.pdf
+2025-10-16 14:22:03.039 | INFO     | __main__:process_file:187 - Processing: Team_Structure_Roles.pdf
+2025-10-16 14:22:03.067 | INFO     | __main__:process_file:194 - ✓ Created 75 chunks from E-commerce_Solutions_Guide2.pdf
+2025-10-16 14:22:03.096 | INFO     | __main__:process_file:187 - Processing: Training_Development_Programs.pdf
+2025-10-16 14:22:05.089 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:05.160 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:05.367 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:05.378 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:05.385 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from Team_Structure_Roles.pdf
+2025-10-16 14:22:05.388 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Social_Media_Marketing_Guide.pdf
+2025-10-16 14:22:05.404 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from SEO_Service_Documentation.pdf
+2025-10-16 14:22:05.407 | INFO     | __main__:process_file:187 - Processing: Web_Development_Service_Documentation.pdf
+2025-10-16 14:22:05.412 | INFO     | __main__:process_file:194 - ✓ Created 11 chunks from Training_Development_Programs.pdf
+2025-10-16 14:22:05.940 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-10-16 14:22:05.947 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Web_Development_Service_Documentation.pdf
+2025-10-16 14:22:05.952 | INFO     | __main__:ingest_and_index:216 - ✅ Total chunks: 179
+2025-10-16 14:22:05.957 | INFO     | __main__:ingest_and_index:217 - 🔄 Generating embeddings (batch size: 32)...
+2025-10-16 14:24:18.393 | INFO     | __main__:ingest_and_index:251 - 
+============================================================
+2025-10-16 14:24:18.410 | INFO     | __main__:ingest_and_index:252 - ✨ Ingestion Complete!
+2025-10-16 14:24:18.419 | INFO     | __main__:ingest_and_index:253 - ============================================================
+2025-10-16 14:24:18.426 | INFO     | __main__:ingest_and_index:254 - ✅ Index built & saved: D:\Python Project\RAG Project\rag-openrouter\data\index.faiss
+2025-10-16 14:24:18.433 | INFO     | __main__:ingest_and_index:255 - ✅ Meta saved: D:\Python Project\RAG Project\rag-openrouter\data\meta.json
+2025-10-16 14:24:18.440 | INFO     | __main__:ingest_and_index:256 - ✅ Embeddings saved: D:\Python Project\RAG Project\rag-openrouter\data\embeddings.npy
+2025-10-16 14:24:18.447 | INFO     | __main__:ingest_and_index:257 - 📊 Total vectors: 179
+2025-10-16 14:24:18.452 | INFO     | __main__:ingest_and_index:258 - 📐 Embedding dimension: 768
+2025-10-16 14:24:18.458 | INFO     | __main__:ingest_and_index:259 - ============================================================
+2025-11-12 13:41:24.560 | INFO     | __main__:<module>:264 - ============================================================
+2025-11-12 13:41:24.567 | INFO     | __main__:<module>:265 - 🚀 RAG Document Ingestion Pipeline
+2025-11-12 13:41:24.570 | INFO     | __main__:<module>:266 - ============================================================
+2025-11-12 13:41:24.573 | INFO     | __main__:<module>:282 - 📂 Documents directory: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-11-12 13:41:24.577 | INFO     | __main__:<module>:283 - 🤖 Embedding model: all-mpnet-base-v2
+2025-11-12 13:41:24.580 | INFO     | __main__:<module>:284 - 💾 Output directory: D:\Python Project\RAG Project\rag-openrouter\data
+2025-11-12 13:41:24.583 | INFO     | __main__:<module>:285 - 📊 Chunk size: 800, Overlap: 150
+2025-11-12 13:41:24.585 | INFO     | __main__:<module>:286 - 🔄 Batch size: 32
+
+2025-11-12 13:41:24.592 | INFO     | __main__:ingest_and_index:164 - Loading embedder: all-mpnet-base-v2
+2025-11-12 13:41:28.736 | INFO     | __main__:ingest_and_index:171 - 📂 Scanning documents in: D:\Python Project\RAG Project\rag-openrouter\docs
+2025-11-12 13:41:28.744 | INFO     | __main__:ingest_and_index:180 - 📄 Found 20 document(s)
+2025-11-12 13:41:28.747 | INFO     | __main__:process_file:187 - Processing: Client_Case_Studies.pdf
+2025-11-12 13:41:28.749 | INFO     | __main__:process_file:187 - Processing: Client_Onboarding_Guide.pdf
+2025-11-12 13:41:28.751 | INFO     | __main__:process_file:187 - Processing: Company_Overview_Detailed.pdf
+2025-11-12 13:41:28.753 | INFO     | __main__:process_file:187 - Processing: Content_Writing_Service_Guide.pdf
+2025-11-12 13:41:29.534 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:29.537 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Company_Overview_Detailed.pdf
+2025-11-12 13:41:29.539 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:29.539 | INFO     | __main__:process_file:187 - Processing: Data_Privacy_GDPR_Policy.pdf
+2025-11-12 13:41:29.540 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:29.541 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:29.547 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Content_Writing_Service_Guide.pdf
+2025-11-12 13:41:29.552 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Case_Studies.pdf
+2025-11-12 13:41:29.556 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Client_Onboarding_Guide.pdf
+2025-11-12 13:41:29.558 | INFO     | __main__:process_file:187 - Processing: Diversity_Inclusion_Policy.pdf
+2025-11-12 13:41:29.561 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide.pdf
+2025-11-12 13:41:29.563 | INFO     | __main__:process_file:187 - Processing: E-commerce_Solutions_Guide2.pdf
+2025-11-12 13:41:30.187 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:30.209 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Diversity_Inclusion_Policy.pdf
+2025-11-12 13:41:30.249 | INFO     | __main__:process_file:187 - Processing: Employee_Handbook_Detailed.pdf
+2025-11-12 13:41:30.297 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:30.302 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Data_Privacy_GDPR_Policy.pdf
+2025-11-12 13:41:30.307 | INFO     | __main__:process_file:187 - Processing: HR_Policy_Detailed.pdf
+2025-11-12 13:41:30.325 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:30.343 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from E-commerce_Solutions_Guide.pdf
+2025-11-12 13:41:30.381 | INFO     | __main__:process_file:187 - Processing: IT_Security_Policy.pdf
+2025-11-12 13:41:30.998 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:31.051 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from Employee_Handbook_Detailed.pdf
+2025-11-12 13:41:31.112 | INFO     | __main__:process_file:187 - Processing: PPC_Advertising_Service_Guide.pdf
+2025-11-12 13:41:32.246 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:32.324 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from IT_Security_Policy.pdf
+2025-11-12 13:41:32.384 | INFO     | __main__:process_file:187 - Processing: Project_Management_Guide.pdf
+2025-11-12 13:41:32.659 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:32.669 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from HR_Policy_Detailed.pdf
+2025-11-12 13:41:32.731 | INFO     | __main__:process_file:187 - Processing: Sales_Playbook_Detailed.pdf
+2025-11-12 13:41:33.078 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:33.102 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from PPC_Advertising_Service_Guide.pdf
+2025-11-12 13:41:33.160 | INFO     | __main__:process_file:187 - Processing: sample_document.md
+2025-11-12 13:41:33.593 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:33.640 | INFO     | __main__:process_file:194 - ✓ Created 7 chunks from Project_Management_Guide.pdf
+2025-11-12 13:41:33.670 | INFO     | __main__:process_file:187 - Processing: SEO_Service_Documentation.pdf
+2025-11-12 13:41:33.769 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:33.778 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from sample_document.md
+2025-11-12 13:41:33.832 | INFO     | __main__:process_file:187 - Processing: Social_Media_Marketing_Guide.pdf
+2025-11-12 13:41:33.930 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:33.946 | INFO     | __main__:process_file:194 - ✓ Created 13 chunks from Sales_Playbook_Detailed.pdf
+2025-11-12 13:41:33.962 | INFO     | __main__:process_file:187 - Processing: Team_Structure_Roles.pdf
+2025-11-12 13:41:35.444 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:35.460 | INFO     | __main__:process_file:194 - ✓ Created 3 chunks from SEO_Service_Documentation.pdf
+2025-11-12 13:41:35.504 | INFO     | __main__:process_file:187 - Processing: Training_Development_Programs.pdf
+2025-11-12 13:41:35.850 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:35.890 | INFO     | __main__:process_file:194 - ✓ Created 6 chunks from Social_Media_Marketing_Guide.pdf
+2025-11-12 13:41:35.913 | INFO     | __main__:process_file:187 - Processing: Web_Development_Service_Documentation.pdf
+2025-11-12 13:41:36.183 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:36.197 | INFO     | __main__:process_file:194 - ✓ Created 2 chunks from Team_Structure_Roles.pdf
+2025-11-12 13:41:37.274 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:37.308 | INFO     | __main__:process_file:194 - ✓ Created 11 chunks from Training_Development_Programs.pdf
+2025-11-12 13:41:37.537 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:37.570 | INFO     | __main__:process_file:194 - ✓ Created 5 chunks from Web_Development_Service_Documentation.pdf
+2025-11-12 13:41:38.756 | WARNING  | __main__:chunk_text:109 - tiktoken not available, falling back to character-based chunking
+2025-11-12 13:41:38.768 | INFO     | __main__:process_file:194 - ✓ Created 75 chunks from E-commerce_Solutions_Guide2.pdf
+2025-11-12 13:41:38.774 | INFO     | __main__:ingest_and_index:216 - ✅ Total chunks: 179
+2025-11-12 13:41:38.777 | INFO     | __main__:ingest_and_index:217 - 🔄 Generating embeddings (batch size: 32)...
+2025-11-12 13:43:16.547 | INFO     | __main__:ingest_and_index:251 - 
+============================================================
+2025-11-12 13:43:16.558 | INFO     | __main__:ingest_and_index:252 - ✨ Ingestion Complete!
+2025-11-12 13:43:16.561 | INFO     | __main__:ingest_and_index:253 - ============================================================
+2025-11-12 13:43:16.563 | INFO     | __main__:ingest_and_index:254 - ✅ Index built & saved: D:\Python Project\RAG Project\rag-openrouter\data\index.faiss
+2025-11-12 13:43:16.565 | INFO     | __main__:ingest_and_index:255 - ✅ Meta saved: D:\Python Project\RAG Project\rag-openrouter\data\meta.json
+2025-11-12 13:43:16.568 | INFO     | __main__:ingest_and_index:256 - ✅ Embeddings saved: D:\Python Project\RAG Project\rag-openrouter\data\embeddings.npy
+2025-11-12 13:43:16.571 | INFO     | __main__:ingest_and_index:257 - 📊 Total vectors: 179
+2025-11-12 13:43:16.575 | INFO     | __main__:ingest_and_index:258 - 📐 Embedding dimension: 768
+2025-11-12 13:43:16.578 | INFO     | __main__:ingest_and_index:259 - ============================================================
