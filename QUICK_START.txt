@@ -1,0 +1,122 @@
+===============================================
+QUICK START - 5 MINUTES TO RUNNING SYSTEM
+===============================================
+
+STEP 1: Install Dependencies (1 min)
+------------------------------------
+pip install -r requirements.txt
+
+
+STEP 2: Setup API Key (30 sec)
+------------------------------
+1. Get OpenRouter API key from: https://openrouter.ai/keys
+2. Create .env file:
+   echo OPENROUTER_API_KEY=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 > .env
+
+
+STEP 3: Build Index (2 min)
+---------------------------
+python src/ingest.py --docs docs/
+
+# Wait for: "✅ Indexing complete!"
+
+
+STEP 4: Start Server (30 sec)
+-----------------------------
+python src/api_openrouter.py
+
+# Wait for: "Application startup complete"
+# Server running on: http://localhost:8000
+
+
+STEP 5: Start Frontend (30 sec)
+-------------------------------
+# Open new terminal
+streamlit run src/frontend_streamlit.py
+
+# Browser opens automatically: http://localhost:8501
+
+
+STEP 6: Test It! (30 sec)
+-------------------------
+1. Click "🎤 Start Recording" (or type question)
+2. Ask: "What services do you offer?"
+3. Click "🚀 Ask"
+4. See answer with citations!
+
+
+===============================================
+DEFAULT CREDENTIALS
+===============================================
+Admin API Key: admin_key_123
+User API Key: user_key_456
+
+⚠️  Change these in production!
+
+
+===============================================
+QUICK TEST COMMANDS
+===============================================
+
+# Health check
+curl http://localhost:8000/health
+
+# Query (with auth)
+curl -X POST http://localhost:8000/query \
+  -H "X-API-Key: user_key_456" \
+  -H "Content-Type: application/json" \
+  -d '{"question":"What services do you offer?","top_k":5}'
+
+# List models
+curl http://localhost:8000/models
+
+
+===============================================
+TROUBLESHOOTING
+===============================================
+
+❌ "Module not found"
+→ pip install -r requirements.txt
+
+❌ "API key not set"
+→ Create .env file with OPENROUTER_API_KEY
+
+❌ "Index files missing"
+→ Run: python src/ingest.py --docs docs/
+
+❌ "Port 8000 already in use"
+→ Kill process: taskkill /F /PID <pid>
+→ Or change port in api_openrouter.py
+
+
+===============================================
+NEXT STEPS
+===============================================
+
+✅ Read DEPLOYMENT_GUIDE.txt for full details
+✅ Run tests: python run_tests.py
+✅ Tune config: src/config.py
+✅ Add your documents to docs/ folder
+✅ Re-run ingest after adding docs
+
+
+===============================================
+FEATURES INCLUDED
+===============================================
+
+✅ Speech-to-Text (Web Speech API)
+✅ Citations with every answer
+✅ Confidence scoring
+✅ Safe-fail for low confidence
+✅ Admin auth & RBAC
+✅ Document upload with versioning
+✅ Audit logging for compliance
+✅ Session memory (conversation context)
+✅ Response caching
+✅ Rate limiting
+✅ Performance monitoring
+
+
+===============================================
+SYSTEM READY! 🚀
+===============================================
